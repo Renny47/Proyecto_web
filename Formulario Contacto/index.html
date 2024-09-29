@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario de Contacto</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .contact-form {
+            background-color: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            max-width: 500px;
+            width: 100%;
+        }
+
+        .contact-form h2 {
+            margin-bottom: 15px;
+            font-size: 24px;
+            color: #333;
+        }
+
+        .contact-form p {
+            font-size: 14px;
+            color: #777;
+            margin-bottom: 20px;
+        }
+
+        .contact-form label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: bold;
+        }
+
+        .contact-form input, .contact-form textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            font-size: 14px;
+        }
+
+        .contact-form input[type="submit"] {
+            background-color: #007bff;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+
+        .contact-form input[type="submit"]:hover {
+            background-color: #0056b3;
+        }
+
+        .contact-form small {
+            color: red;
+        }
+    </style>
+</head>
+<body>
+
+    <form class="contact-form" action="#" method="POST">
+        <h2>Formulario De Contacto</h2>
+        <p>Enviar un correo electrónico. Todos los campos con el asterisco (*) son obligatorios.</p>
+        
+        <label for="name">Nombre *</label>
+        <input type="text" id="name" name="name" required minlength="3" maxlength="20" placeholder="Nombre" title="El nombre debe tener entre 3 y 20 caracteres">
+
+        <label for="email">Correo electrónico *</label>
+        <input type="email" id="email" name="email" required placeholder="Correo electrónico">
+
+        <label for="subject">Asunto *</label>
+        <input type="text" id="subject" name="subject" required minlength="5" maxlength="50" placeholder="Asunto" title="El asunto debe tener entre 5 y 50 caracteres">
+
+        <label for="message">Mensaje *</label>
+        <textarea id="message" name="message" required placeholder="Escribe tu mensaje" rows="5"></textarea>
+
+        <input type="submit" value="Enviar">
+    </form>
+
+</body>
+</html>
