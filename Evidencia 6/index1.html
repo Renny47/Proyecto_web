@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array de Meses</title>
+</head>
+<body>
+    <h2>Array de Meses</h2>
+    <button onclick="mostrarMes()">Mostrar Mes en la Posición 6</button>
+    <p id="resultado"></p>
+
+    <script>
+        function mostrarMes() {
+            var meses = ["Enero", "Febrero", "Marzo", "Abril", "Mayo", "Junio", "Julio", "Agosto", "Septiembre", "Octubre", "Noviembre", "Diciembre"];
+            document.getElementById("resultado").textContent = "El mes en la posición 6 es: " + meses[5];
+        }
+    </script>
+</body>
+</html>

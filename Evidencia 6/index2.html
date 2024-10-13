@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bienvenida</title>
+</head>
+<body>
+    <h2>Bienvenido al sistema de consulta</h2>
+    <label for="nombre">Por favor, ingrese su nombre:</label>
+    <input type="text" id="nombre">
+    <button onclick="mostrarBienvenida()">Enviar</button>
+    <p id="mensaje"></p>
+
+    <script>
+        function mostrarBienvenida() {
+            var nombre = document.getElementById("nombre").value;
+            document.getElementById("mensaje").textContent = "Bienvenido " + nombre + ", al sistema de consulta.";
+        }
+    </script>
+</body>
+</html>

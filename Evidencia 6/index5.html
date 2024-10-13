@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tabla de Multiplicar con Selección</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <h2>Generar tabla de multiplicar</h2>
+        <label for="selector">Seleccione un número del 1 al 10:</label>
+        <select id="selector" class="form-select">
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6">6</option>
+            <option value="7">7</option>
+            <option value="8">8</option>
+            <option value="9">9</option>
+            <option value="10">10</option>
+        </select>
+        <button class="btn btn-primary mt-2" onclick="generarTabla()">Generar Tabla</button>
+
+        <div id="resultado" class="mt-4">
+        </div>
+    </div>
+
+    <script>
+        function generarTabla() {
+            var valor = document.getElementById("selector").value;
+            var resultado = "";
+            for (var i = 1; i <= 12; i++) {
+                resultado += i + " x " + valor + " = " + (i * valor) + "<br>";
+            }
+            document.getElementById("resultado").innerHTML = resultado;
+        }
+    </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

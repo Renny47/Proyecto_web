@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Verificación de Edad</title>
+</head>
+<body>
+    <h2>Bienvenido</h2>
+    <label for="edad">Por favor, ingrese su edad:</label>
+    <input type="number" id="edad">
+    <button onclick="verificarEdad()">Enviar</button>
+    <p id="mensaje"></p>
+
+    <script>
+        function verificarEdad() {
+            var edad = document.getElementById("edad").value;
+            if (edad >= 18) {
+                document.getElementById("mensaje").textContent = "Usted tiene acceso a todos nuestros servicios.";
+            } else {
+                document.getElementById("mensaje").textContent = "Usted tiene acceso a servicios limitados.";
+            }
+        }
+    </script>
+</body>
+</html>

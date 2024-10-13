@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tabla de Multiplicar</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <h2>Generar tabla de multiplicar</h2>
+        <label for="valor">Ingrese un número del 1 al 10:</label>
+        <input type="number" id="valor" min="1" max="10">
+        <button class="btn btn-primary" onclick="generarTabla()">Generar Tabla</button>
+
+        
+        <div class="modal fade" id="tablaModal" tabindex="-1" aria-labelledby="tablaModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="tablaModalLabel">Tabla de Multiplicar</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body" id="resultadoTabla">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function generarTabla() {
+            var valor = document.getElementById("valor").value;
+            var resultado = "";
+            for (var i = 1; i <= 12; i++) {
+                resultado += i + " x " + valor + " = " + (i * valor) + "<br>";
+            }
+            document.getElementById("resultadoTabla").innerHTML = resultado;
+            var tablaModal = new bootstrap.Modal(document.getElementById('tablaModal'));
+            tablaModal.show();
+        }
+    </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
